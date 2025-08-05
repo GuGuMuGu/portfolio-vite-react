@@ -10,7 +10,7 @@ const Blog = () => {
       date: "2025-07-15",
       readTime: "8 min read",
       category: "Sustainability",
-      image: "/travel-license.jpg",
+      image: "/Vmake1754400643797.png",
       featured: true,
     },
     {

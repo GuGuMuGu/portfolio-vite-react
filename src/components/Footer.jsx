@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin, Instagram, Phone, Heart } from "lucide-react"
+ import { Mail, Github, Linkedin, Instagram, Phone, Heart } from "lucide-react"
 
 const Footer = () => {
   const socialLinks = [
@@ -37,29 +37,9 @@ const Footer = () => {
   return (
     <footer className="bg-black/90 backdrop-blur-md py-8 text-white">
       <div className="max-w-6xl mx-auto px-6">
+        {/* New Flex Layout: Left = Social, Right = Text */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          {/* Brand */}
-          <div className="text-center md:text-left">
-            <h3 className="text-xl font-bold mb-2">Adarsh Sharma</h3>
-            <p className="text-gray-400 text-sm">Designer + Coder</p>
-            <p className="text-gray-400 text-xs mt-1">Gautam Buddha Nagar, UP, India</p>
-          </div>
-
-          {/* Contact Info */}
-          <div className="text-center">
-            <p className="text-gray-400 text-sm mb-1">
-              <a href="mailto:adarshsharma.tech@gmail.com" className="hover:text-white transition-colors">
-                adarshsharma.tech@gmail.com
-              </a>
-            </p>
-            <p className="text-gray-400 text-sm">
-              <a href="tel:+916203519158" className="hover:text-white transition-colors">
-                +91 6203519158
-              </a>
-            </p>
-          </div>
-
-          {/* Social Links - Separated */}
+          {/* Social Links */}
           <div className="flex gap-4">
             {socialLinks.map((social, index) => {
               const Icon = social.icon
@@ -78,13 +58,11 @@ const Footer = () => {
               )
             })}
           </div>
-        </div>
 
-        {/* Copyright */}
-        <div className="text-center mt-6 pt-6 border-t border-white/10">
-          <p className="text-sm text-gray-400 flex items-center justify-center gap-1">
+          {/* Copyright */}
+          <div className="text-sm text-gray-400 flex items-center gap-1">
             © 2025 Made with <Heart size={14} className="text-red-500" /> by Adarsh Sharma
-          </p>
+          </div>
         </div>
       </div>
     </footer>
